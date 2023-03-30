@@ -2,7 +2,33 @@
     ViewData["Title"] = "Home Page";
 }
 
+<style>
+    body {
+        background-image: url("/Images/background.jpg");
+        background-size: cover;
+    }
+    p {
+        font-weight: bold;
+        font-size:large;
+        color:darkslategrey;
+        background-color:white
+    }
+
+    input[type="text"]{
+        width: 300px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: white
+    }
+</style>
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-1">Welcome</h1>
+    <img src="/Images/Photo.jpg" alt="Brian Shaw" style="width: 500px; height: auto;"/>
+    <p>Connect With Me <a href="https://www.linkedin.com/in/brian-shaw-rva/">On LinkedIn </a>.</p>
+    <p>I have created a database of terms that is maintained in a SQL database and can be adjusted here to meet all CRUD requirements.</p>
+    <p><a href="/Terminology/Index/">Click Here</a> Or on the Terminology tab above to check it out</p>
 </div>

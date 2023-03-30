@@ -42,8 +42,8 @@ namespace Testing.Controllers
 
         public IActionResult ViewAllOfCategory (string category) 
         {
-            var terminology = repo.GetAllOfCategory(category);
-            return View(terminology);
+            var categories = repo.GetAllOfCategory(category);
+            return View(categories);
         }
         public IActionResult InsertTerminology()
         {

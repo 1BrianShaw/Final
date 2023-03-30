@@ -396,9 +396,10 @@ h6, .h6 {
 }
 
 .display-1 {
+  color: white;
   font-size: 6rem;
-  font-weight: 300;
-  line-height: 1.2;
+  font-weight: 600;
+  line-height: 3;
 }
 
 .display-2 {

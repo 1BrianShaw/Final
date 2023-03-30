@@ -14,7 +14,7 @@
         @foreach (var terminology in Model.OrderBy(t => t.Category))
         {
             <tr>
-                <td style="width: 10%"><a href=/Terminology/ViewAllOfCategory/@terminology.Category>@terminology.Category</a></td>
+                <td style="width: 10%"><a href=/Categories/Index/@terminology.Category>@terminology.Category</a></td>
                 <td style="width: 15%"><a href=/Terminology/ViewTerminology/@terminology.ID>@terminology.Term</a></td>
                 <td style="width: 75%">@terminology.Definition</td>
            </tr>
