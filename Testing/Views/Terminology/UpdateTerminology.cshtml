@@ -1,0 +1,19 @@
+﻿@model Terminology
+
+<h2>Update @Model.Term</h2>
+
+@using (Html.BeginForm("UpdateTerminologyToDatabase", "Terminology", "Post"))
+{
+    <input asp-for="ID" type="hidden" value="@Model.ID" />
+
+    <label asp-for="Term" class="control-label">Term</label>
+    <input type="text" name="Term" class="form-control" value="@Model.Term" />
+
+    <label asp-for="Definition" class="control-label">Definition</label>
+    <input type="text" name="Definition" class="form-control" value="@Model.Definition" />
+
+    <label asp-for="Category" class="control-label">Category</label>
+    <input type="text" name="Category" class="form-control" value="@Model.Category" />
+
+    <input type="submit" value="Update Terminology" class="btn btn-primary" />
+}

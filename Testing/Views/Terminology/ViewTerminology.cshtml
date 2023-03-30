@@ -1,0 +1,31 @@
+﻿@model Terminology
+
+<h3>@Model.Category Information</h3>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Category</th>
+        <th>Term</th>
+        <th>Defintion</th>
+    </tr>
+    <tr>
+        <td>@Model.ID</td>
+        <td>@Model.Category</td>
+        <td>@Model.Term</td>
+        <td>@Model.Definition</td>
+    </tr>
+</table>
+
+<div style="display: block">
+    <a href="/Terminology/UpdateTerminology/@Model.ID">Update this Term</a>
+</div>
+
+<div style="display: block">
+
+    @using (Html.BeginForm("DeleteTerminology", "Terminology", "Post"))
+    {
+        <input type="hidden" asp-for="ID" value="@Model.ID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this Term" />
+    }
+</div>

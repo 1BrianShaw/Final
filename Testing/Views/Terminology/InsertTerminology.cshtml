@@ -1,0 +1,30 @@
+﻿@model Terminology
+
+<h2>Create a New Term</h2>
+
+@using (Html.BeginForm("InsertTerminologyToDatabase", "Terminology", "Post"))
+{
+    <input asp-for="ID" type="hidden" value="" />
+    
+
+    <label asp-for="Term" class="control-label">Terminology</label>
+    <input type="text" name="Term" class="form-control" value="" />
+
+    <label asp-for="Definition" class="control-label">Definition</label>
+    <input type="text" name="Definition" class="form-control" value="" />
+
+    <div class="form-group">
+        <label for="">Select a Category</label>
+        <select class="form-control" name="category" value="">
+            @foreach (var cat in @Model.Categories)
+            {
+                <option value="@cat.Category"> @cat.Category</option>
+            }
+        </select>
+    </div>
+
+ 
+
+
+    <input type="submit" value="Create Terminology" class="btn btn-primary" />
+}

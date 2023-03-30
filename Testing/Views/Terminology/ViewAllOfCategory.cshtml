@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Terminology>
+
+<h2>Category</h2>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Category</th>
+        <th>Term</th>
+        <th>Defintion</th>
+    </tr>
+
+    @foreach (var terminology in @Model)
+    {
+        <tr>
+            <td><a href=/Terminology/ViewTerminology/@terminology.ID>@terminology.ID</a></td>
+            <td>@terminology.Category</td>
+            <td>@terminology.Term</td>
+            <td>@terminology.Definition</td>
+       </tr>
+    }
+
+</table>
